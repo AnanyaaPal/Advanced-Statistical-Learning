@@ -28,6 +28,21 @@ def _check_eligibility(age: int):
 _check_eligibility(11)
 
 # Check if a password is strong 
+# Assuming that a password should contain atleast 8 characters
+# Assumung that it should contain at least one capital letter, one small letter, one special character @ , . / ! 
+
+def _check_password_strength(password):
+
+chars = set('Aa@,./!')
+    if len(password) < 8: 
+        if 
+        return('Password has insufficient length.')
+    
+    else:
+        return('Password has sufficient lenght.')
+    
+_check_password_strength('lol')
 
 
+        
 
