@@ -31,17 +31,41 @@ _check_eligibility(11)
 # Assuming that a password should contain atleast 8 characters
 # Assumung that it should contain at least one capital letter, one small letter, one special character @ , . / ! 
 
-def _check_password_strength(password):
+#def _check_password_strength(password):
 
-chars = set('Aa@,./!')
-    if len(password) < 8: 
-        if 
-        return('Password has insufficient length.')
-    
-    else:
-        return('Password has sufficient lenght.')
-    
-_check_password_strength('lol')
+# *args is used for non-keyworded variable length argument list 
+
+def test_var_args(f_arg, *argv):
+    print('first normal arg', f_arg)
+    for arg in argv:
+        print('another arg through *argv', arg)
+test_var_args('lol','hello','there','how','are','you') 
+
+def ML_models(par1, *otherparameters):
+    print('first must have parameter',par1)
+    for par in otherparameters:
+        print('other parameters for the ML model include *otherparameters', par)
+ML_models('MAPE','iloc','ts_index')
+
+import pandas as pd
+class TimeSeries:
+    def __init__(self, data= None, file_path=None, sheet_name=None):
+        """
+        Initialize the TimeSeries object with either CSV/ excel.
+        """
+        self.data = None
+
+        if isinstance(data , str):
+            if data.endswith('.csv'):
+                self.data = self._convert_to_dataframe(data)
+        elif isinstance(data, pd.DataFrame):
+            self.data = data
+
+def test_debug(word: str):
+
+    print('Hello', word)
+
+test_debug(21)
 
 
         
